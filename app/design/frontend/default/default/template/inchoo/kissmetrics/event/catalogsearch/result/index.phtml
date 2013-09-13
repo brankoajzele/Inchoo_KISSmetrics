@@ -1,0 +1,12 @@
+<?php
+/**
+ * @category    Inchoo
+ * @package     Inchoo_KISSmetrics
+ * @author      Branko Ajzele <ajzele@gmail.com>
+ * @copyright   Copyright (c) Inchoo
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+<?php if (($_query = $this->getSearchQueryString())): ?>
+    <script type="text/javascript">  _kmq.push(['record', '<?php echo $this->__('Quick Search Form') ?>', {'q': '<?php echo $_query ?>'}]);</script>
+<?php endif; ?>

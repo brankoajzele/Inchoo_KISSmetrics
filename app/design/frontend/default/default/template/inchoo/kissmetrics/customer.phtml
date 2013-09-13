@@ -1,0 +1,12 @@
+<?php
+/**
+ * @category    Inchoo
+ * @package     Inchoo_KISSmetrics
+ * @author      Branko Ajzele <ajzele@gmail.com>
+ * @copyright   Copyright (c) Inchoo
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+<?php if (($identify = $this->getIdentify())): ?>
+    <script type="text/javascript">  _kmq.push(['identify', '<?php echo $identify ?>']);</script>
+<?php endif; ?>

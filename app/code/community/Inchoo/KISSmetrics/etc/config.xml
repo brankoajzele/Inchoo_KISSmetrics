@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category    Inchoo
+ * @package     Inchoo_KISSmetrics
+ * @author      Branko Ajzele <ajzele@gmail.com>
+ * @copyright   Copyright (c) Inchoo
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Inchoo_KISSmetrics>
+            <version>1.0.0.0</version>
+        </Inchoo_KISSmetrics>
+    </modules>
+    <global>
+        <models>
+            <inchoo_kissmetrics>
+                <class>Inchoo_KISSmetrics_Model</class>
+            </inchoo_kissmetrics>
+        </models>        
+        <blocks>
+            <inchoo_kissmetrics>
+                <class>Inchoo_KISSmetrics_Block</class>
+            </inchoo_kissmetrics>
+        </blocks>
+        <helpers>
+            <inchoo_kissmetrics>
+                <class>Inchoo_KISSmetrics_Helper</class>
+            </inchoo_kissmetrics>
+        </helpers>
+    </global>
+    <frontend>       
+        <layout>
+            <updates>
+                <inchoo_kissmetrics>
+                    <file>inchoo_kissmetrics.xml</file>
+                </inchoo_kissmetrics>
+            </updates>
+        </layout>
+        <events>
+            <core_block_abstract_to_html_after>
+                <observers>
+                    <inchoo_kissmetrics_trackCheckoutStepBillingInformation>
+                        <class>inchoo_kissmetrics/observer</class>
+                        <method>trackCheckoutStepBillingInformation</method>
+                    </inchoo_kissmetrics_trackCheckoutStepBillingInformation>
+                    <inchoo_kissmetrics_trackCheckoutStepShippingInformation>
+                        <class>inchoo_kissmetrics/observer</class>
+                        <method>trackCheckoutStepShippingInformation</method>
+                    </inchoo_kissmetrics_trackCheckoutStepShippingInformation>                                         
+                </observers>                
+            </core_block_abstract_to_html_after>
+            <controller_action_postdispatch_checkout_onepage_saveBilling>
+                <observers>
+                    <inchoo_kissmetrics_trackCheckoutStepShippingMethod>
+                        <class>inchoo_kissmetrics/observer</class>
+                        <method>trackCheckoutStepShippingMethod</method>
+                    </inchoo_kissmetrics_trackCheckoutStepShippingMethod>
+                </observers>                 
+            </controller_action_postdispatch_checkout_onepage_saveBilling>            
+            <controller_action_postdispatch_checkout_onepage_saveShipping>
+                <observers>
+                    <inchoo_kissmetrics_trackCheckoutStepShippingMethod>
+                        <class>inchoo_kissmetrics/observer</class>
+                        <method>trackCheckoutStepShippingMethod</method>
+                    </inchoo_kissmetrics_trackCheckoutStepShippingMethod>
+                </observers>                 
+            </controller_action_postdispatch_checkout_onepage_saveShipping>             
+            <controller_action_postdispatch_checkout_onepage_saveShippingMethod>
+                <observers>
+                    <inchoo_kissmetrics_trackCheckoutStepPaymentInformation>
+                        <class>inchoo_kissmetrics/observer</class>
+                        <method>trackCheckoutStepPaymentInformation</method>
+                    </inchoo_kissmetrics_trackCheckoutStepPaymentInformation>
+                </observers>                 
+            </controller_action_postdispatch_checkout_onepage_saveShippingMethod>            
+            <controller_action_postdispatch_checkout_onepage_savePayment>
+                <observers>
+                    <inchoo_kissmetrics_trackCheckoutStepOrderReview>
+                        <class>inchoo_kissmetrics/observer</class>
+                        <method>trackCheckoutStepOrderReview</method>
+                    </inchoo_kissmetrics_trackCheckoutStepOrderReview>
+                </observers>                 
+            </controller_action_postdispatch_checkout_onepage_savePayment>            
+        </events>
+    </frontend>     
+    <default>
+        <inchoo_kissmetrics>
+            <settings>
+                <active>0</active>
+                <api_key></api_key>
+            </settings>
+        </inchoo_kissmetrics>
+    </default>
+</config>

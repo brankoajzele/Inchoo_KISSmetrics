@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <block type="inchoo_kissmetrics/head" name="inchoo_kissmetrics_head" />
+        </reference>
+    </default>
+    <customer_logged_in>
+        <reference name="head">
+            <block type="inchoo_kissmetrics/customer" name="inchoo_kissmetrics_customer" />
+        </reference>
+    </customer_logged_in>
+    <!-- START tracked events -->
+    <customer_account_create>
+        <reference name="head">
+            <block type="inchoo_kissmetrics/event_customer_account_create" name="inchoo_kissmetrics_event_customer_account_create" />
+        </reference>
+    </customer_account_create>
+    <customer_account_forgotpassword>
+        <reference name="head">
+            <block type="inchoo_kissmetrics/event_customer_account_forgotpassword" name="inchoo_kissmetrics_event_customer_account_forgotpassword" />
+        </reference>
+    </customer_account_forgotpassword>
+    <catalog_category_default>
+        <reference name="head">
+            <block type="inchoo_kissmetrics/event_catalog_category_default" name="inchoo_kissmetrics_event_catalog_category_default" />
+        </reference>
+    </catalog_category_default>
+    <catalog_category_layered>
+        <reference name="head">
+            <block type="inchoo_kissmetrics/event_catalog_category_layered" name="inchoo_kissmetrics_event_catalog_category_layered" />
+        </reference>
+    </catalog_category_layered>
+    <catalog_product_view>
+        <reference name="head">
+            <block type="inchoo_kissmetrics/event_catalog_product_view" name="inchoo_kissmetrics_event_catalog_product_view" />
+        </reference>
+    </catalog_product_view>
+    <catalogsearch_result_index>
+        <reference name="head">
+            <block type="inchoo_kissmetrics/event_catalogsearch_result_index" name="inchoo_kissmetrics_event_catalogsearch_result_index" />
+        </reference>
+    </catalogsearch_result_index>
+    <catalogsearch_advanced_result>
+        <reference name="head">
+            <block type="inchoo_kissmetrics/event_catalogsearch_advanced_result" name="inchoo_kissmetrics_event_catalogsearch_advanced_result" />
+        </reference>
+    </catalogsearch_advanced_result>
+    <contacts_index_index>
+        <reference name="head">
+            <block type="inchoo_kissmetrics/event_contacts_index" name="inchoo_kissmetrics_event_contacts_index" />
+        </reference>        
+    </contacts_index_index>
+    <checkout_cart_index>
+        <reference name="head">
+            <block type="inchoo_kissmetrics/event_checkout_cart_index" name="inchoo_kissmetrics_event_checkout_cart_index" />
+        </reference>
+    </checkout_cart_index>
+    <checkout_onepage_index>
+        <reference name="head">
+            <block type="inchoo_kissmetrics/event_checkout_onepage_index" name="inchoo_kissmetrics_event_checkout_onepage_index" />
+        </reference>
+    </checkout_onepage_index>
+    <checkout_onepage_success>
+        <reference name="head">
+            <block type="inchoo_kissmetrics/event_checkout_onepage_success" name="inchoo_kissmetrics_event_checkout_onepage_success" />
+        </reference>        
+    </checkout_onepage_success>
+    <!-- END tracked events -->
+</layout>

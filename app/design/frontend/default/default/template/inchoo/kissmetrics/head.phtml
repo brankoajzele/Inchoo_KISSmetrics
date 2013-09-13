@@ -1,0 +1,24 @@
+<?php
+/**
+ * @category    Inchoo
+ * @package     Inchoo_KISSmetrics
+ * @author      Branko Ajzele <ajzele@gmail.com>
+ * @copyright   Copyright (c) Inchoo
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+<script type="text/javascript">var _kmq = _kmq || [];
+    var _kmk = _kmk || '<?php echo $this->getApiKey() ?>';
+    function _kms(u) {
+        setTimeout(function() {
+            var d = document, f = d.getElementsByTagName('script')[0],
+                    s = d.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = u;
+            f.parentNode.insertBefore(s, f);
+        }, 1);
+    }
+    _kms('//i.kissmetrics.com/i.js');
+    _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+</script>
